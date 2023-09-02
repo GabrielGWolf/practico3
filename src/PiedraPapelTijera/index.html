@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Practico 2 - Piedra Papel Tijera</title>
+</head>
+
+<body>
+    <h1>¡¡Piedra, Papel, Tijera!!</h1>
+    <hr>
+
+    <div id="Mensajes"></div>
+
+    <div class="contenedor">
+        <div class="columna1">
+            <div id="Datos">
+                <h2>Datos del Jugador: ¿Quien sos?</h2>
+                <p>Tu nombre: <input type="text" placeholder="Nombre Completo" id="nombre"></p>
+                <p>Tu apellido: <input type="text" placeholder="Apellido Completo" id="apellido"></p>
+            </div>
+            <div>
+                <button onclick="nombreJugador()" id="IniciarJuego">Iniciar juego</button>
+            </div>
+        </div>
+
+        <div class="columna2" id="columna2">
+
+            <div class="Titulos">
+                <h2>Bienvenido <div id="Jugador"></div>
+                </h2>
+                <h3>Elija una opción</h3>
+
+            </div>
+
+            <div class="Eleccion">
+                <button onclick="obtenerJugadaUsuario('Piedra')" id="Piedra"><img src="./assets/img/piedra.png"
+                        alt="Piedra"></button>
+                <button onclick="obtenerJugadaUsuario('Papel')" id="Papel"><img src="./assets/img/papel.png"
+                        alt="Papel"></button>
+                <button onclick="obtenerJugadaUsuario('Tijera')" id="Tijera"><img src="./assets/img/tijeras.png"
+                        alt="Tijera"></button>
+            </div>
+            <div class="Titulos">
+                <p id="eleccionDelUsuario">Jugador eligió: </p>
+            </div>
+            <div class="Botones">
+                <button id="jugar" onclick="determinarGanador()">Jugar!</button>
+                <button onclick="Limpiarjuego()" class="Limpiar" id="reiniciar">Limpiar</button></p>
+            </div>
+        </div>
+
+        <div class="columna3" id="columna3">
+            <div class="Ganador">
+                <h3 id="Ganador"> Tabla de Resultados</h3>
+                <h3><span id="contadorVictorias">0</span> | <span id="contadorDerrotas">0</span></h3>
+            </div>
+
+
+            <div id="TituloResultado">
+                <h3>Resultados de cada juego </h3>
+            </div>
+
+            <div id="Resultado">
+                <table id="tablaResultados">
+                    <tr>
+                        <th>Partida</th>
+                        <th>Elección del Jugador</th>
+                        <th>Elección de la Computadora</th>
+                        <th>Resultado</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- POPUP -->
+    <div id="popup" class="popup">
+        <div class="popup-contenido">
+            <h2>¡Juego terminado!</h2>
+            <p id="ganadorGlobal">El juego ha finalizado. Haz clic en "Reiniciar" para jugar nuevamente.</p>
+            <button onclick="cerrarPopup()">Cerrar</button>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
