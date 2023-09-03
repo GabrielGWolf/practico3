@@ -2,7 +2,7 @@
 import React from 'react';
 
 function Options({ onPlayerChoice }) {
-  const choices = ['piedra', 'papel', 'tijera'];
+  const choices = ['espada', 'escudo', 'hacha'];
 
   const handleOptionClick = (choice) => {
     onPlayerChoice(choice);

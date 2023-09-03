@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Skranji';
+    src: url("../font/Skranji-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    background-color: lightgray;
+    color: black;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Skranji', 
+    
+}
+
+body::after {
+    content: "";
+    background-image: url(./odin.png);
+    background-size: 40%;
+    background-position: center center;
+    background-attachment: fixed; /* Esto evita que la imagen se desplace con el contenido */
+    background-size: 30%;
+    background-repeat: no-repeat;
+    filter: contrast(0.5); /* Cambia el valor para ajustar el contraste */
+    opacity: 0.2; /* Cambia la opacidad según sea necesario */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  button {
+    background-color: #22333B;
+    color: white;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    font-size: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #FF9F1C;
+    transform: scale(1.05);
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 4px 4px 5px gray;
+    font-family: "Skranji" ;
+}

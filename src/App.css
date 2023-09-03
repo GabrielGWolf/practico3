@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  align-items: center;
+  background-color: black;
+  color: aliceblue;
 }
 
 .App-logo {
@@ -35,4 +38,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  display: block;
+  align-items: center;
+  align-items: center;
+  background-color: black;
+  color: aliceblue;
 }
