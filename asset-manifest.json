@@ -1,18 +1,21 @@
 {
   "files": {
     "main.css": "/practico3/static/css/main.f62c8a79.css",
-    "main.js": "/practico3/static/js/main.93960ac9.js",
+    "main.js": "/practico3/static/js/main.ba3dd62a.js",
     "static/media/odin.png": "/practico3/static/media/odin.c6b6461f8bbdad1ba0f0.png",
     "static/media/shield.png": "/practico3/static/media/shield.5538be400d2c10d92710.png",
     "static/media/Skranji-Regular.woff": "/practico3/static/media/Skranji-Regular.7cb2a864560c001ac9ff.woff",
     "static/media/waraxe.png": "/practico3/static/media/waraxe.dace847cf933a03d8def.png",
+    "static/media/waraxe2.png": "/practico3/static/media/waraxe2.79fbddda2b7dcd1dff54.png",
+    "static/media/sword2.png": "/practico3/static/media/sword2.f227c719e997e782ab5c.png",
+    "static/media/shield2.png": "/practico3/static/media/shield2.6bf8970db1ce9a21015c.png",
     "static/media/sword.png": "/practico3/static/media/sword.25572e4dabb9b586b994.png",
     "index.html": "/practico3/index.html",
     "main.f62c8a79.css.map": "/practico3/static/css/main.f62c8a79.css.map",
-    "main.93960ac9.js.map": "/practico3/static/js/main.93960ac9.js.map"
+    "main.ba3dd62a.js.map": "/practico3/static/js/main.ba3dd62a.js.map"
   },
   "entrypoints": [
     "static/css/main.f62c8a79.css",
-    "static/js/main.93960ac9.js"
+    "static/js/main.ba3dd62a.js"
   ]
 }
