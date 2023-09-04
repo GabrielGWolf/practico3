@@ -5,8 +5,8 @@ function Scoreboard({ playerScore, computerScore }) {
   return (
     <div>
       <h2>Marcador:</h2>
-      <p>Jugador: {playerScore}</p>
-      <p>Computadora: {computerScore}</p>
+      <p>Enemigos derrotados: {playerScore}</p>
+      <p>Veces que caíste en batalla: {computerScore}</p>
     </div>
   );
 }

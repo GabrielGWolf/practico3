@@ -1,4 +1,4 @@
-// Options.js
+/* // Options.js
 import React from 'react';
 
 function Options({ onPlayerChoice }) {
@@ -14,7 +14,7 @@ function Options({ onPlayerChoice }) {
 
   return (
     <div>
-      <h2>Elige tu opción:</h2>
+      <h2>Elige tu armamento, de él dependerá tu destino:</h2>
       {choices.map((choice) => (
         <button key={choice} onClick={() => handleOptionClick(choice)}>
           {choice}
@@ -25,3 +25,4 @@ function Options({ onPlayerChoice }) {
 }
 
 export default Options;
+ */

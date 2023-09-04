@@ -5,9 +5,9 @@ function Result({ playerChoice, computerChoice, result }) {
   return (
     <div>
       <h2>Resultado:</h2>
-      <p>Tu elección: {playerChoice}</p>
-      <p>Elección de la computadora: {computerChoice}</p>
-      <p>{result}</p>
+      <p>Tu Arma: {playerChoice}</p>
+      <p>Arma del Rival: {computerChoice}</p>
+      <p>Ganador de esta ronda: {result}</p>
     </div>
   );
 }

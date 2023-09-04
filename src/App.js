@@ -23,7 +23,6 @@ function App() {
     const [winner, setWinner] = useState(null);
     const [isNameComplete, setIsNameComplete] = useState(false);
     const [isGameEnabled, setIsGameEnabled] = useState(false);
-    /* const [showIntro, setShowIntro] = useState(true); Nueva variable para mostrar la introducción */
     const choices = ['espada', 'escudo', 'hacha'];
 
     const determineWinner = (playerChoice, computerChoice) => {
@@ -34,8 +33,10 @@ function App() {
             (playerChoice === 'escudo' && computerChoice === 'espada') ||
             (playerChoice === 'hacha' && computerChoice === 'escudo')
         ) {
+            setRound(round + 1)
             return 'Jugador';
         } else {
+            setRound(round + 1)
             return 'PC';
         }
     };
@@ -55,7 +56,6 @@ function App() {
                 setComputerScore(computerScore + 1);
             }
 
-            setRound(round + 1);
 
             if (round >= maxRounds) {
                 const gameWinner = playerScore > computerScore ? 'Jugador' : 'PC';
@@ -91,17 +91,12 @@ function App() {
             // Mostrar SweetAlert si el nombre está vacío
             Swal.fire({
                 icon: 'error',
-                title: 'Nombre vacío',
-                text: 'El nombre no puede estar vacío. Por favor, ingresa tu nombre.',
+                title: 'No hay anonimos en el Valhalla',
+                html: 'Guerrero!! Necesitamos saber a quien alabaremos.<br/> Por favor, dinos tu nombre.',
+                confirmButtonText: 'Si tanto lo deseas... ',
             });
         }
     };
-
-/*     const handleNameChange = (event) => {
-        const newName = event.target.value;
-        setPlayerName(newName);
-        setIsNameComplete(newName.trim() !== ''); // Verificar si el nombre no está vacío
-    }; */
 
     const handleRestart = () => {
         setRound(1);
@@ -117,10 +112,10 @@ function App() {
     const showWelcomeAlert = () => {
         Swal.fire({
             title: '¡Bienvenido al juego!',
-            html: "Este es el clasico juego de Piedra Papel Tijeras pero con un 'nuevo giro'.<br/> En este juego, jugas con ESPADA, HACHA o ESCUDO.<br/> El Hacha parte al escudo (como la Tijera cortaba el Papel),<br/> el Escudo detiene a la Espada (como el Papel envolvía la Piedra),<br/> La Espada atravieza la defensa del Hacha (como la Piedra aplasta la Tijera)<br/>. ¡Que Odin te sonría, y tengas mucha suerte en la batalla!. <br/> Presiona el botón para comenzar.<br/>",
+            html: "Este es el clasico juego de Piedra Papel Tijeras pero con un 'nuevo giro'.<br/> En este juego, jugas con ESPADA, HACHA o ESCUDO.<br/> - El Hacha parte al escudo (como la Tijera cortaba el Papel),<br/> - El Escudo detiene a la Espada (como el Papel envolvía la Piedra),<br/> - La Espada atravieza la defensa del Hacha (como la Piedra aplasta la Tijera).<br/> ¡Que Odin te sonría, y tengas mucha suerte en la batalla!. <br/>",
             icon: 'warning',
             confirmButtonText: '¡Estoy listo para la Batalla!',
-         
+
         }).then((result) => {
             if (result.isConfirmed) {
                 setIsGameEnabled(true); // Habilitar el juego
@@ -131,7 +126,7 @@ function App() {
 
     return (
         <div>
-            <h1>¿Podrás Entrar al Valhalla? <br/> Una reversión del clásico Piedra, Papel o Tijeras</h1>
+            <h1>¿Podrás Entrar al Valhalla? <br /> Una reversión del clásico Piedra, Papel o Tijeras</h1>
             {!isGameEnabled && (
                 <button onClick={showWelcomeAlert}>Iniciar Juego</button>
             )}
