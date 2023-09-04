@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# ¿Podrás entrar la Valhalla, valiente guerrero?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Piedra Papel Tijeras, con un giro de tuerca gráfico
 
-## Available Scripts
+El juego es el clasico Piedra Papel Tijera, realizado como un ejercicio del curso de programación web con componentes activos, utilizando React.
+Pero decidí darle una vuelta y cambiar un poco las cosas...
+Entonces realicé las siguientes adaptaciones:
 
-In the project directory, you can run:
+Viejo valor | Nuevo valor
+--------|-------
+Piedra | Espada
+Papel | Escudo
+Tijera | Hacha
 
-### `npm start`
+Donde Espada atraviesa la defensa del Hacha (así como la Piedra destruía las Tijeras), el Hacha parte el Escudo (así como las Tijeras cortaban el Papel), y el Escudo detiene a la Espada (así como el Papel envolvía la Piedra).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Fuentes / Credito:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Font utilizada: 
 
-### `npm run build`
+"Skranji"
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Copyright (c) 2012, Font Diner (www.fontdiner.com), with Reserved Font Name "Skranji".
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Imagenes: 
 
-### `npm run eject`
+Obtenidas en http://www.freepik.com - Diseñado para / por macrovector / Freepik
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Scritps y piezas de codigo. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -118,8 +118,9 @@ function App() {
         Swal.fire({
             title: '¡Bienvenido al juego!',
             html: "Este es el clasico juego de Piedra Papel Tijeras pero con un 'nuevo giro'.<br/> En este juego, jugas con ESPADA, HACHA o ESCUDO.<br/> El Hacha parte al escudo (como la Tijera cortaba el Papel),<br/> el Escudo detiene a la Espada (como el Papel envolvía la Piedra),<br/> La Espada atravieza la defensa del Hacha (como la Piedra aplasta la Tijera)<br/>. ¡Que Odin te sonría, y tengas mucha suerte en la batalla!. <br/> Presiona el botón para comenzar.<br/>",
-            icon: 'info',
-            confirmButtonText: 'Comenzar',
+            icon: 'warning',
+            confirmButtonText: '¡Estoy listo para la Batalla!',
+         
         }).then((result) => {
             if (result.isConfirmed) {
                 setIsGameEnabled(true); // Habilitar el juego
