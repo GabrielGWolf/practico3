@@ -1,16 +1,21 @@
-/* Importaciones  */
 import React, { useState } from 'react';
-import UserInterface from './UserInterface'; //interfaz del usuario
-import Scoreboard from './Scoreboard'; // tablero de resultados
-import Result from './Result'; // resultados
+/* Agrego SweetAlerts2 para utilizar en el modulo */
 import Swal from 'sweetalert2'; //Utiliza SweetAlerts como componente visual para mejorar la pagina en gral.
+/* Import de las imagenes que neesito utilizar*/
 import './assets/img/shield.png';
 import './assets/img/sword.png';
 import './assets/img/waraxe.png';
 import './assets/css/styles.css';
+/* Import de los modulos a utilizar */
+import UserInterface from './UserInterface'; //interfaz del usuario
+import Scoreboard from './Scoreboard'; // tablero de resultados
+import Result from './Result'; // resultados
+import Popup from './Popup';
+
+
 
 function App() {
-    /* CONST */
+    /* CONSTS */
     const [playerName, setPlayerName] = useState('');
     const [playerChoice, setPlayerChoice] = useState(null);
     const [computerChoice, setComputerChoice] = useState(null);
@@ -23,7 +28,10 @@ function App() {
     const [winner, setWinner] = useState(null);
     const [isNameComplete, setIsNameComplete] = useState(false);
     const [isGameEnabled, setIsGameEnabled] = useState(false);
+    const [ventanaFinal, setVentanaFinal] = useState(false);
     const choices = ['espada', 'escudo', 'hacha'];
+
+    /* FUNCIONES - ACCIONES */
 
     const determineWinner = (playerChoice, computerChoice) => {
         if (playerChoice === computerChoice) {
@@ -39,6 +47,18 @@ function App() {
             setRound(round + 1)
             return 'PC';
         }
+    };
+
+    const resetGame = () => {
+        setRound(1);
+        setPlayerScore(0);
+        setComputerScore(0);
+        setPlayerChoice(null);
+        setComputerChoice(null);
+        setResult('');
+        setGameOver(false);
+        setWinner(null);
+        setVentanaFinal(false)
     };
 
     const handlePlayerChoice = (choice) => {
@@ -61,26 +81,17 @@ function App() {
                 const gameWinner = playerScore > computerScore ? 'Jugador' : 'PC';
                 setGameOver(true);
                 setWinner(gameWinner);
+                setVentanaFinal(true);
 
-                // Mostrar SweetAlert de ganador
-                Swal.fire({
-                    title: `¡${gameWinner === 'Jugador' ? playerName : 'PC'} es el ganador!`,
-                    icon: "success",
-                    confirmButtonText: 'Reiniciar Partida',
-                }).then(() => {
-                    // Restablecer el juego
-                    setRound(1);
-                    setPlayerScore(0);
-                    setComputerScore(0);
-                    setPlayerChoice(null);
-                    setComputerChoice(null);
-                    setResult('');
-                    setGameOver(false);
-                    setWinner(null);
-                });
             }
         }
     };
+
+
+    const handleRestart = () => {
+        resetGame();
+    };
+
 
     const handleNameSubmit = () => {
         // Verificar si el nombre no está vacío y habilitar el juego
@@ -98,16 +109,6 @@ function App() {
         }
     };
 
-    const handleRestart = () => {
-        setRound(1);
-        setPlayerScore(0);
-        setComputerScore(0);
-        setPlayerChoice(null);
-        setComputerChoice(null);
-        setResult('');
-        setGameOver(false);
-        setWinner(null);
-    };
 
     const showWelcomeAlert = () => {
         Swal.fire({
@@ -123,6 +124,7 @@ function App() {
         });
     };
 
+    /* LO QUE SE RENDERIZA FINALMENTE */
 
     return (
         <div>
@@ -163,12 +165,10 @@ function App() {
             )}
 
             {gameOver && (
-                <>
-                    <p>El juego ha terminado. El ganador es: {winner}</p>
-                    <button onClick={handleRestart}>Reiniciar Partida</button>
-                </>
-            )}
-        </div>
+                <Popup playerName={playerName} gameWinner={winner} onRestart={handleRestart}/>       
+            )
+            }
+        </div >
     );
 }
 
