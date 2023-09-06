@@ -33,6 +33,8 @@ function App() {
 
     /* FUNCIONES - ACCIONES */
 
+    /* determinar ganador - lógica del juego - reglas */
+
     const determineWinner = (playerChoice, computerChoice) => {
         if (playerChoice === computerChoice) {
             return 'Empate';
@@ -48,6 +50,7 @@ function App() {
             return 'PC';
         }
     };
+    /* Resetear el juego, para iniciar de nuevo con el mismo usuario */
 
     const resetGame = () => {
         setRound(1);
@@ -60,6 +63,12 @@ function App() {
         setWinner(null);
         setVentanaFinal(false)
     };
+
+    const handleRestart = () => {
+        resetGame();
+    };
+
+    /* Elección del jugador: Maneja también la generación del random de la PC y llama al resultado del partido, usando las reglas del juego */
 
     const handlePlayerChoice = (choice) => {
         if (round <= maxRounds) {
@@ -76,7 +85,6 @@ function App() {
                 setComputerScore(computerScore + 1);
             }
 
-
             if (round >= maxRounds) {
                 const gameWinner = playerScore > computerScore ? 'Jugador' : 'PC';
                 setGameOver(true);
@@ -86,12 +94,6 @@ function App() {
             }
         }
     };
-
-
-    const handleRestart = () => {
-        resetGame();
-    };
-
 
     const handleNameSubmit = () => {
         // Verificar si el nombre no está vacío y habilitar el juego
@@ -109,7 +111,7 @@ function App() {
         }
     };
 
-
+        /* iniciar el juego, mostrar las reglas,*/
     const showWelcomeAlert = () => {
         Swal.fire({
             title: '¡Bienvenido al juego!',
@@ -136,7 +138,7 @@ function App() {
             {isGameEnabled && !isNameComplete && (
                 <form>
                     <label>
-                        ¡¡Guerrero!! Grite fuerte su nombre:
+                        <p className='bienvenida'>¡¡Guerrero!! Grite fuerte su nombre:</p>
                         <input
                             type="text"
                             value={playerName}
