@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/practico3/static/css/main.a43ebd98.css",
-    "main.js": "/practico3/static/js/main.08e89071.js",
+    "main.css": "/practico3/static/css/main.443644e3.css",
+    "main.js": "/practico3/static/js/main.9da86edf.js",
     "static/media/odin.png": "/practico3/static/media/odin.c6b6461f8bbdad1ba0f0.png",
     "static/media/skull.png": "/practico3/static/media/skull.70cebd5dfb15de34f27a.png",
     "static/media/shield.png": "/practico3/static/media/shield.5538be400d2c10d92710.png",
@@ -12,11 +12,11 @@
     "static/media/shield2.png": "/practico3/static/media/shield2.6bf8970db1ce9a21015c.png",
     "static/media/sword.png": "/practico3/static/media/sword.25572e4dabb9b586b994.png",
     "index.html": "/practico3/index.html",
-    "main.a43ebd98.css.map": "/practico3/static/css/main.a43ebd98.css.map",
-    "main.08e89071.js.map": "/practico3/static/js/main.08e89071.js.map"
+    "main.443644e3.css.map": "/practico3/static/css/main.443644e3.css.map",
+    "main.9da86edf.js.map": "/practico3/static/js/main.9da86edf.js.map"
   },
   "entrypoints": [
-    "static/css/main.a43ebd98.css",
-    "static/js/main.08e89071.js"
+    "static/css/main.443644e3.css",
+    "static/js/main.9da86edf.js"
   ]
 }
