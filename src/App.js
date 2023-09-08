@@ -153,7 +153,7 @@ function App() {
 
             {isNameComplete && !gameOver && (
                 <>
-                    <p>Bienvenido {playerName}</p>
+                    <p className='bienvenida'>Bienvenido {playerName}</p>
                     <UserInterface onPlayerChoice={handlePlayerChoice} />
                     <Scoreboard playerScore={playerScore} computerScore={computerScore} />
                     <Result

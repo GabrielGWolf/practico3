@@ -1,4 +1,4 @@
-/* // Options.js
+// Options.js
 import React from 'react';
 
 function Options({ onPlayerChoice }) {
@@ -25,4 +25,3 @@ function Options({ onPlayerChoice }) {
 }
 
 export default Options;
- */
