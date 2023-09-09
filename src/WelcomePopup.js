@@ -1,8 +1,5 @@
 // WelcomePopup.js
 import React from 'react';
-import Fondo from './assets/img/fondo.png'
-
-
 
 function WelcomePopup({ showPopup, onStartGame, onClose }) {
   const handleStartClick = () => {
