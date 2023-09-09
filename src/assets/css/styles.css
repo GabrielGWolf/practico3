@@ -34,6 +34,27 @@ body::after {
     z-index: -1;
 }
 
+.welcomePopup {
+    background-color: transparent;
+    color: black;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Skranji';
+    background-image: url(../img/fondo.png);
+}
+
+.welcomePopup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    font-family: "Skranji";
+  }
+
 /* h1 - Titulo principal */
 h1 {
     text-align: center;
@@ -85,9 +106,9 @@ button:hover {
 /* Estilo para el PopUp final */
 
 .popup.ganador {
-    background-image: /* url(../img/skull.png), */ url(../img/odin.png);
-    background-position:/*  left center, */ right center;
-    background-attachment: fixed, /* fixed */;
+    background-image: url(../img/odin.png);
+    background-position:right center;
+    background-attachment: fixed;
     background-size: 30%;
     background-repeat: no-repeat, no-repeat;
     font-family: 'Skranji';
@@ -105,9 +126,9 @@ button:hover {
   }
 
   .popup.perdedor {
-    background-image: url(../img/skull.png) /* url(../img/odin.png) */;
-    background-position: left center, /* right center */;
-    background-attachment: fixed, /* fixed */;
+    background-image: url(../img/skull.png);
+    background-position: left center;
+    background-attachment: fixed;
     background-size: 30%;
     background-repeat: no-repeat, no-repeat;
     font-family: 'Skranji';

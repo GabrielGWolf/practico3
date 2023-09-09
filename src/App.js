@@ -11,6 +11,7 @@ import UserInterface from './UserInterface'; //interfaz del usuario
 import Scoreboard from './Scoreboard'; // tablero de resultados
 import Result from './Result'; // resultados
 import Popup from './Popup';
+import WelcomePopup from './WelcomePopup';
 
 
 
@@ -28,6 +29,7 @@ function App() {
     const [winner, setWinner] = useState(null);
     const [isNameComplete, setIsNameComplete] = useState(false);
     const [isGameEnabled, setIsGameEnabled] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
     const [ventanaFinal, setVentanaFinal] = useState(false);
     const choices = ['espada', 'escudo', 'hacha'];
 
@@ -111,20 +113,17 @@ function App() {
         }
     };
 
-        /* iniciar el juego, mostrar las reglas,*/
-    const showWelcomeAlert = () => {
-        Swal.fire({
-            title: '¡Bienvenido al juego!',
-            html: "Este es el clasico juego de Piedra Papel Tijeras pero con un 'nuevo giro'.<br/> En este juego, jugas con ESPADA, HACHA o ESCUDO.<br/> - El Hacha parte al escudo (como la Tijera cortaba el Papel),<br/> - El Escudo detiene a la Espada (como el Papel envolvía la Piedra),<br/> - La Espada atravieza la defensa del Hacha (como la Piedra aplasta la Tijera).<br/> ¡Que Odin te sonría, y tengas mucha suerte en la batalla!. <br/>",
-            icon: 'warning',
-            confirmButtonText: '¡Estoy listo para la Batalla!',
+    /* iniciar el juego, mostrar las reglas,*/
 
-        }).then((result) => {
-            if (result.isConfirmed) {
-                setIsGameEnabled(true); // Habilitar el juego
-            }
-        });
+    const handleGameStart = () => {
+        setIsGameEnabled(true);
     };
+
+    const handleClosePopup = () => {
+        setShowPopup(false);
+    };
+
+
 
     /* LO QUE SE RENDERIZA FINALMENTE */
 
@@ -132,8 +131,9 @@ function App() {
         <div>
             <h1>¿Podrás Entrar al Valhalla? <br /> Una reversión del clásico Piedra, Papel o Tijeras</h1>
             {!isGameEnabled && (
-                <button onClick={showWelcomeAlert}>Iniciar Juego</button>
+                <button onClick={() => setShowPopup(true)}>Iniciar Juego</button>
             )}
+            <WelcomePopup showPopup={showPopup} onStartGame={handleGameStart} onClose={handleClosePopup} />
 
             {isGameEnabled && !isNameComplete && (
                 <form>
@@ -167,7 +167,7 @@ function App() {
             )}
 
             {gameOver && (
-                <Popup playerName={playerName} gameWinner={winner} onRestart={handleRestart}/>       
+                <Popup playerName={playerName} gameWinner={winner} onRestart={handleRestart} />
             )
             }
         </div >
