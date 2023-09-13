@@ -1,10 +1,12 @@
+/* Import para poder usar States */
 import React, { useState } from 'react';
 /* Agrego SweetAlerts2 para utilizar en el modulo */
 import Swal from 'sweetalert2'; //Utiliza SweetAlerts como componente visual para mejorar la pagina en gral.
 /* Import de las imagenes que neesito utilizar*/
-import './assets/img/shield.png';
+/* import './assets/img/shield.png';
 import './assets/img/sword.png';
-import './assets/img/waraxe.png';
+import './assets/img/waraxe.png'; */
+/* Import de CSS */
 import './assets/css/styles.css';
 /* Import de los modulos a utilizar */
 import UserInterface from './UserInterface'; //interfaz del usuario
@@ -12,8 +14,6 @@ import Scoreboard from './Scoreboard'; // tablero de resultados
 import Result from './Result'; // resultados
 import Popup from './Popup';
 import WelcomePopup from './WelcomePopup';
-
-
 
 function App() {
     /* CONSTS */
@@ -133,22 +133,24 @@ function App() {
             {!isGameEnabled && (
                 <button onClick={() => setShowPopup(true)}>Iniciar Juego</button>
             )}
-            <WelcomePopup showPopup={showPopup} onStartGame={handleGameStart} onClose={handleClosePopup} />
+            <WelcomePopup
+                showPopup={showPopup}
+                onStartGame={handleGameStart}
+                onClose={handleClosePopup}
+
+            />
 
             {isGameEnabled && !isNameComplete && (
-                <form>
-                    <label>
-                        <p className='bienvenida'>¡¡Guerrero!! Grite fuerte su nombre:</p>
+                <div>
+                    <p className='bienvenida'>¡¡Guerrero!! Grite fuerte su nombre:</p>
                         <input
                             type="text"
-                            value={playerName}
                             onChange={(event) => setPlayerName(event.target.value)}
-                        />
-                    </label>
+                        />                    
                     <button type="button" onClick={handleNameSubmit}>
                         ¡Este es mi nombre!
                     </button>
-                </form>
+                </div>
             )}
 
             {isNameComplete && !gameOver && (
@@ -167,7 +169,11 @@ function App() {
             )}
 
             {gameOver && (
-                <Popup playerName={playerName} gameWinner={winner} onRestart={handleRestart} />
+                <Popup
+                    playerName={playerName}
+                    gameWinner={winner}
+                    onRestart={handleRestart}
+                />
             )
             }
         </div >
