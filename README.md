@@ -53,8 +53,6 @@ Utilicé Swal para hacer más vistoso y cómodo algunos sectores del código. Li
 
 ### Scritps y piezas de codigo. 
 
-S
-
 - Piezas de código corregidos con ChatGPT => http://chat.openai.com
 
 - Información de https://www.w3schools.com/react/default.asp
@@ -63,8 +61,15 @@ S
 
 ## Testeo y Debug
 
-Queda pendiente mejorar los módulos de opciones y el Popup de bienvenida.
-Haber utilizado 
+Se solucionaron errores de renderización en los botones. Por consejo de mis testers, decidí cambiar el rojo que les daba la sensación de que el boton estaba "deshabilitado" por un morado. 
+Cambié el uso de SweetAlerts por un popup personalizado en 2 de 3 lugares. 
+
+##  Algunos pendientes
+Queda pendiente mejorar las reglas para que se corte cuando uno de los jugadores (usuario o pc) obtenga 3 puntos, y que no obligue a jugar los 5 si o si. 
+
+Falta mejorar la modularización.
+
+
 
 ## Agradecimientos: 
 

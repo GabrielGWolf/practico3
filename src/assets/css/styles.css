@@ -99,7 +99,7 @@ button:hover {
 }
 
 .botonHacha:hover {
-    background-color:darkred;
+    background-color:darkviolet;
     transform: scale(1.15);
 }
 
